@@ -113,15 +113,12 @@ EXTERN_C NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING Regis
 	if (!ErrorCode)
 	{
 		DbgPrint("[+] Read Success!!!\n");
+
 		for (ULONG i = 0; i < 0x10; i++)
 		{
 			DbgPrint("%c", *(PCHAR)Buffer);
 		}
 		DbgPrint("\n");
-	}
-	else
-	{
-
 	}
 
 	ExFreePool(VirtualAddress);
